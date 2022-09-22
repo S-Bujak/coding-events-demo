@@ -4,17 +4,21 @@
 <body class="container">
 
 
-<header th:replace="fragments :: navigation"></header>
+<header th:replace="fragments :: header"></header>
 <p th:unless="${events} and ${events.size()}">No Events!</p>
 
 <table class="table table-striped">
     <thread>
         <tr>
+            <th>ID</th>
             <th>Name</th>
+            <th>Description</th>
         </tr>
     </thread>
     <tr th:each="event : ${events}">
-        <td th:text="${event}"></td>
+        <td th:text="${event.id}"></td>
+        <td th:text="${event.name}"></td>
+        <td th:text="${event.description}"></td>
     </tr>
 </table>
 

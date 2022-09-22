@@ -4,12 +4,17 @@
 <body class="container">
 
 
-<header th:replace="fragments :: navigation"></header>
+<header th:replace="fragments :: header"></header>
 
 <form method="post">
     <div class="form-group">
-        <label>
+        <label>Name
     <input type="text" name="eventName" class="form-control">
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Description
+            <input type="text" name="eventDescription" class="form-control">
         </label>
     </div>
     <div class="form-group">
